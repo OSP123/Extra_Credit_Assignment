@@ -1,0 +1,19 @@
+//         toughness check of basic troop against fast attack unit -- WORKING
+         System.out.println(space_marines.unitsList.get(0).toughnessCheck(tyranids.unitsList.get(16)));
+         
+//         Save check of basic troop against fast attack unit --NOW WORKING
+//          Logic was incorrect before (save was set to false, instead of true)
+         System.out.println(tyranids.unitsList.get(16).saveCheck());
+                  // Testing out the attackUnit. Problem seems to occur in the logic of
+         // damage method. -- Seems to be working
+         System.out.println(tyranids.unitsList.get(0).type + " Number of Units left " 
+               + tyranids.numUnits + "\n");
+         Units someUnit = space_marines.unitsList.get(0);
+         someUnit.attackUnit(tyranids, tyranids.unitsList.get(0));
+         System.out.println(tyranids.unitsList.get(0).type + " Number of Units left " 
+            + tyranids.numUnits );
+         
+       for (Units p : tyranids.unitsList)
+       System.out.println("\nStrength: " + p.strength + "\nToughness" 
+          + p.toughness + "\nAttacks: " + p.attacks + "\n" + "Save: " + p.save
+          + "\nWounds: " + p.wounds);
